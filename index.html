@@ -1,208 +1,30 @@
-<html lang="en">
+<html>
+<head>
+<link rel="stylesheet" href="index.css">
+<title>UCP Login</title>
+</head>
+
 <body>
-<title>PHP (tunnels)</title>
+<p class="header">
+  <img src="UCP_logo.png" alt="logo" width="300" height="121">
+</p>
 
-<!-- begin CSS -->
-<style>
-.class1 input[type="text"]{
-	display: block;
-	margin: 8px;
-	width: 40%;
-	font-family: sans-serif;
-	font-size: 14px;
-	margin-left: 15px;
-}
-
-.class2 {
-	font-family: sans-serif;
-	margin: 3px;
-}
-
-.class3 {
-	font-family: sans-serif;
-	margin: 3px;
-}
-
-.class4 {
-	font-family: sans-serif;
-	margin: 3px;
-}
-
-.class5 {
-	font-size: 14px;
-	font-family: sans-serif;
-	margin: 3px;
-}
-
-.class1 :focus {
-	outline: none;
-}
-.class2 :focus {
-	outline: none;
-}
-.class3 :focus {
-	outline: none;
-}
-.class4 :focus {
-	outline: none;
-}
-.class5 :focus {
-	outline: none;
-}
-
-body {
-	background-color: #F5F5F5;
-  color: black;
-  margin-left: 10px;
-	font-size: 18px;
-}
-</style>
-<!-- end CSS -->
-
-<form action="test.php" method="post">
-
-<div class="class1" id="studentName">
-	Student Name: <input type="text" name="studentName">
-	Student Number: <input type="text" name="studentNumber">
-	Teacher: <input type="text" name="teacher">
+<div class="JUST">
+<p class="login">
+  Login
+  <form action="login.php" method="post">
+  <p class="loginIn">
+    username: <input type="text" name="uname" class="textBoxes">
+    <br><br>
+    password: <input type="password" name="pw" class="textBoxes2">
+    <br><br>
+    <input type="submit">
+  </p>
+  </form>
+  <p class="forgotten">
+    forgot UN/PW?
+  </p>
+</p>
 </div>
-
-<br>Date of Birth: <input type="date" name="dob"><br>
-
-Student Grade:
-	<select>
-	<option value="N/A"></option><br>
-	<option value="K">K</option><br>
-	<option value="1">1</option><br>
-	<option value="2">2</option><br>
-	<option value="3">3</option><br>
-	<option value="4">4</option><br>
-	<option value="5">5</option><br>
-	</select>
-	<br><br>
-
-
-</form>
-
-<div class="class2" id="textAreas" align="center">
-<table>
-	<tr>
-		<th>Academic</th>
-		<th>Behavior</th>
-		<th>Health Conditions</th>
-	</tr>
-	<tr>
-		<td><textarea name="academic" rows="10" cols="45"></textarea></td>
-		<td><textarea name="academic" rows="10" cols="45"></textarea></td>
-		<td><textarea name="academic" rows="10" cols="45"></textarea></td>
-	</tr>
-
-</table>
-</div>
-
-<br>
-
-<div class="class3" id="tables" align="center">
-<table border="1" cellpadding="3" cellspacing="0" width="400">
-<tr>
-	<th>Purpose</th>
-	<th>Individual</th>
-	<th>Outcome</th>
-</tr>
-<tr>
-	<td>Additional Curriculum Resources</td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-</tr>
-<tr>
-	<td>Behavior Concerns</td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-</tr>
-<tr>
-	<td>ESOL Concerns</td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-</tr>
-<tr>
-	<td>Health Issues</td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-</tr>
-<tr>
-	<td>Possible Interventions</td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-</tr>
-<tr>
-	<td>Reading and Math Recommendations</td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-</tr>
-<tr>
-	<td>Speech and Language</td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-</tr>
-<tr>
-	<td>Other</td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-	<td><textarea name="academic" rows="3" cols="50"></textarea></td>
-</tr>
-</table>
-</div>
-
-<br>
-
-<div class="class4" id="tables2" align="center">
-<table border="1" cellpadding="4" cellspacing="0" width="900">
-<tr>
-	<td>Please review student cum.</td>
-	<td><td>
-	<td>Date cum. was reviewed <input type="date" name="reviewdate"></td>
-</tr>
-<tr>
-	<td>Did the student pass the vision screening test?</td>
-	<td><input type="radio" name="vt" value="yes">Yes <input type="radio" name="vt" value="no">No</td>
-	<td>Note: <td><textarea name="academic" rows="3" cols="50"></textarea></td></td>
-</tr>
-<tr>
-	<td>Did the student pass the hearing screening test?</td>
-	<td><input type="radio" name="ht" value="yes">Yes <input type="radio" name="ht" value="no">No</td>
-	<td>Note: <td><textarea name="academic" rows="3" cols="50"></textarea></td></td>
-</tr>
-<tr>
-	<td>Is mobility a concern?</td>
-	<td><input type="radio" name="mob" value="yes">Yes <input type="radio" name="mob" value="no">No</td>
-	<td>Note: <td><textarea name="academic" rows="3" cols="50"></textarea></td></td>
-</tr>
-<tr>
-	<td>Is attendance a concern?</td>
-	<td><input type="radio" name="att" value="yes">Yes <input type="radio" name="att" value="no">No</td>
-	<td>Note: <td><textarea name="academic" rows="3" cols="50"></textarea></td></td>
-</tr>
-<tr>
-	<td>Is student an ESOL student?</td>
-	<td><input type="radio" name="ESOL" value="yes">Yes <input type="radio" name="ESOL" value="no">No</td>
-	<td>Note: <td><textarea name="academic" rows="3" cols="50"></textarea></td></td>
-</tr>
-<tr>
-	<td>Is student an ESE student?</td>
-	<td><input type="radio" name="ESE" value="yes">Yes <input type="radio" name="ESE" value="no">No</td>
-	<td>Note: <td><textarea name="academic" rows="3" cols="50"></textarea></td></td>
-</tr>
-</table>
-</div>
-
-<br>
-
-<div class='class5' align="left">
-	Teacher Signature:
-	<br>Date form was submitted: <input type="date" name="submitdate">
-</div>
-<br>
-{note: need to figure out what web browsers teachers use since input="date" not supported in IE of FF (really)}
-<br><br>
-<input type="submit" value="Submit">
 </body>
 </html>

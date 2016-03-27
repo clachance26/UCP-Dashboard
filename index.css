@@ -1,16 +1,16 @@
 body {
-  background-color: #DDDDDE;
+  background-color: #58989E;
   margin: 0px;
 }
 
 div.JUST {
-  width:80%;
+  width:90%;
   margin-top: 2%;
   margin-right: auto;;
   margin-left: auto;
   margin-bottom: auto;
-  border: 1px solid #DDD333;
-  background-color: #DDD333;
+  border: 1px solid #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 p.header {
@@ -18,8 +18,8 @@ p.header {
   margin-left: 0px;
   /*margin-left: 230px;*/
   margin-bottom: 20px;
-  border: 30px solid #DDD333;
-  background-color: #DDD333;
+  border: 30px solid #FFFFFF;
+  background-color: #FFFFFF;
 }
 
 p.login {
