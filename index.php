@@ -1,6 +1,6 @@
 <html>
 <head>
-<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="stylesheets/index.css">
 <title>UCP Login</title>
 </head>
 
@@ -14,9 +14,9 @@
   Login
   <form action="login.php" method="post">
   <p class="loginIn">
-    username: <input type="text" name="uname" class="textBoxes">
+    username: <input type="text" name="uname" class="textBoxes" required="required">
     <br><br>
-    password: <input type="password" name="pw" class="textBoxes2">
+    password: <input type="password" name="pw" class="textBoxes2" required="required">
     <br><br>
     <input type="submit">
   </p>
