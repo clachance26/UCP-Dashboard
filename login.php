@@ -1,25 +1,23 @@
+<?php require_once("functions.php"); ?>
 <?php
     // check to see if teacher's name is in database
+    $username = $_POST["uname"];
     $passwordHash = md5($_POST["pw"]);
 
-    if ($_POST["uname"] == "adminA") {
-        if ($passwordHash == "e1a52ea772e8d91e4af11baa5a0201a3") {
-            echo "Welcome " . $_POST["uname"];
-        }
-        else {
-            echo "Incorrect login";
-        }
+    $loginStat = checkLogin($username,$passwordHash);
 
+    if (!$loginStat) {
+        header("Location: badLogin.php");
     }
-    else if ($_POST["uname"] == "studentA") {
-        echo "You are a student";
+    else if ($loginStat == "admin") {
+        header("Location: sb_admin/index.html");
     }
     else {
-        echo "unreconized user";
-        echo $passwordHash;
+        //$loginStat == "user"
+        header("Location: user.php");
     }
+?>
 
-/*
 <script>
     function incorrectLoginPopup() {
         alert("Incorrect Login");
@@ -28,27 +26,3 @@
         alert("Unrecognized Username");
     }
 </script>
-
-<?php
-    // check to see if teacher's name is in database
-    $hashAndSalt = password_hash($_POST["pw"], PASSWORD_BCRYPT);
-    $username = $_POST["uname"];
-    $userpass = $_POST["pw"];
-
-    if ($username == "admin") {
-        // DANGEROUSLY INSECURE 111
-        if (password_verify("admin", $hashAndSalt)) {
-            echo "Welcome " . $username;
-        }
-        else {
-            echo '<script>incorrectLoginPopup()</script>';
-        }
-
-    }
-    else {
-        echo '<script>unrecognizedLoginPopup()</script>';
-    }
-?>
-*/
-
-?>

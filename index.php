@@ -5,7 +5,7 @@
 </head>
 
 <body>
-<p class="header">
+<p class="header" float="left">
   <img src="UCP_logo.png" alt="logo" width="300" height="121">
 </p>
 
