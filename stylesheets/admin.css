@@ -1,0 +1,33 @@
+body {
+  /* background-color: #58989E; */
+  margin: 0px;
+}
+
+p.header {
+  font-size: 48;
+  font-family: Trebuchet MS;
+  float: left;
+  margin: 20px;
+}
+
+p.header_right {
+  font-size: 14;
+  font-family: sans-serif;
+  margin: 5px;
+}
+
+div.left_recs {
+  margin-top: -18px;
+  margin-left: -1px;
+  width:10%;
+  height:5%;
+  border:1px solid #000;
+  font-size: 30px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+hr {
+  border: 1;
+  width: 100%;
+}
