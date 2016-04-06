@@ -1,0 +1,5 @@
+-scrape some things from at least one of the used websites
+-work on integrating laravel into the LAMP stack
+-work on implementing UCP Bailes teacher's class(es) interface
+	-work on dynamically generating web pages, complete with sample html and associated CSS
+-work on linking the database to our website
